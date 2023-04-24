@@ -6,7 +6,7 @@ from langchain.docstore.document import Document
 from langchain.chains.summarize import load_summarize_chain
 
 def main(general_context, context, source_file, output_type):
-    model = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.1)
+    model = ChatOpenAI(model_name='gpt-4', temperature=0.1, request_timeout=180)
 
     chunk_size = 4000
     overlap = 500
